@@ -75,7 +75,11 @@ class ToDoListViewController: SwipeTableViewController {
         
         let cell = super.tableView(tableView, cellForRowAt: indexPath)
         
-        if let item = todoItems?[indexPath.row]{
+//        guard let item = todoItems?[indexPath.row] else {
+//            cell.textLabel?.text = "No Items Added"
+//        }
+        
+        if let item = todoItems?[indexPath.row] {
             
             cell.textLabel?.text = item.title
             
